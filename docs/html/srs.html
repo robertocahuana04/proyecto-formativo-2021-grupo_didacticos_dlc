@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>ESPECIFICACION DE REQUERIMIENTOS</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/encuesta_gerente.css">
+  </head>
+<body style="background-color: gray;">
+  <nav height="100">
+    <div id="lado1">
+      <a class="j1" href="../index.html"><b>retorno</b></a>
+      </div>
+    <div id="lado2">
+      <img src="../assets/img/portfolio/Sena2.png" alt="" width="50" height="50"/>
+      </div>
+  </nav>
+  <main class="container" style="background-color: gray;">
+      <div class="row">
+        <div>
+          .
+          </div>
+        <table border="3" style="text-align: center;border-color: black;background-color:#E7E7E7;" class="col-md-12 col-sm-12 col-xs-12">
+          <tr>
+            <td><h1><strong>ANÁLISIS, DISEÑO, DESARROLLO E IMPLEMENTACIÓN DE UN SOFTWARE DE VENTASPARA LA EMPRESA DISTRIBUCIONES Y DIDACTICOS DE LA COSTA.(SOVEDIDCOST).</strong></h1>
+              <br>
+              <h3 style="text-decoration-line: underline;">(Nombre del proyecto)</h3></td>
+          </tr>
+          <tr>
+            <td><h2>DISTRIBUSCIONES Y DIDACTICOS DE LA COSTA.</h2>
+              <h3 style="text-decoration-line: underline;">(Nombre de la empresa)</h3></td>
+          </tr>
+          <tr>
+            <td>
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;margin-bottom: 30px;">
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Fecha</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Version</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Autor(es)</b></td>
+                </tr>
+                <tr style="background-color: white">
+                  <td>23-09-2020</td>
+                  <td>1.0</td>
+                  <td>Primera version del software</td>
+                  <td>
+                    <ul>
+                      <li style="list-style: none;">Samly Guzman</li>
+                      <li style="list-style: none;">Maverick Fruto</li>
+                      <li style="list-style: none;">Jorge Gonzalez</li>
+                      <li style="list-style: none;">Emerson Gonzalez</li>
+                      <li style="list-style: none;">Juan Castrillo</li>
+                      <li style="list-style: none;">Roberto cahuana</li>
+                    </ul>
+                    </td>
+                </tr>
+                </table>
+              </td>
+          </tr>
+          <tr>
+            <td><h2><strong>ESPECIFICACION DE REQUERIMIENTOS.</strong></h2></td>
+          </tr>
+          <tr>
+            <td style="text-align:justify; padding: 10px 20px;"><h3><b>1.</b> Introducción.</h3>
+                  <p>Sistematizar la forma de organización de información de la empresa (Distribuciones y Didacticos De La Costa) con un software, este será utilizado para el manejo de los datos de la empresa, de sus clientes y proveedores, además de brindarle a la empresa un sitio web, donde posibles clientes se pueden informar de los recursos que pueden conseguir en esta empresa y comparlos mediante este.</p></td>
+          </tr>
+          <tr>
+            <td style="text-align:justify; padding: 10px 20px;"><h4><b>1.1</b> Propósito.</h4>
+              <p>Facilitar a la empresa (DISTRIBUSCIONES Y DIDACTICOS DE LA COSTA) el manejo de su información y dar a conocer el propósito de la misma, por medio de una sitio web la cual tendrá información de esta y que funciones realiza, así como mostrar los materiales y herramientas que pueden adquirir por del sitio web que la empresa pondra en disposición.</p></td>
+          </tr>
+          <tr>
+            <td style="text-align:justify; padding: 10px 20px;"><h4><b>1.2</b> Alcance.</h4>
+              <p>Se le hara entrega a la empresa DISTRIBUCIONES Y DIDACTICOS DE LA COSTA, un sitio web donde la personas podran registrase previamente y comprar los productos que les interese y que la empresa tiene a su disposicion. la empresa sera la encargada de administrar todos los datos y pedidios que tenga la misma. se le dara una induccion a la empresa sobre como usar el sitio web.</p>
+              <p>El respectivo sitio, contara con:</p>
+              <ul>
+                <li>Módulo de loguin.</li>
+                <li>Registros de usuarios.</li>
+                <li>Registro de productos.</li>
+                <li>Stock de productos.</li>
+                <li>Registro de solicitudes.</li>
+                <li>Selección de productos de la página principal.</li>
+                <li>Formulario de compra.</li>
+                <li>Módulo de ayuda.</li>
+              </ul></td>
+          </tr>
+          <tr>
+            <td style="text-align:justify; padding: 10px 20px;"><h4><b>1.3</b> Definiciones, Acrónimos, y Abreviaturas.</h4>
+              <ul>
+                <li>(B_S_S_W_C)-SISTEMA CENTRALIZADO DE DATOS Y SITO WED COSTA.</li>
+                <li>(BD) – Bases de datos - conjunto de datos pertenecientes a un mismo contexto y almacenados sistemáticamente para su posterior uso.</li>
+                <li>UML– Lenguaje de Modelado Unificado - estándar que se ha adoptado a nivel internacional por numerosos organismos y empresas para crear esquemas, diagramas y documentación relativa a los desarrollos de software (programas informáticos).</li>
+                <li>Interfaz: Medio que permite la comunicación entre el usuario y el sistema.</li>
+                <li>Requerimientos funcionales (RF): describen las capacidades o funciones que el sistema será capaz de realizar.</li>
+                <li>Requerimientos no funcionales (RNF): restricciones o características que de delimitan el sistema, como por ejemplo, rendimiento, interfaces de usuario, fiabilidad, seguridad, portabilidad, normas, entre otros.</li>
+                <li>Requerimientos de interfaz de usuario (RIU): describen lo que el usuario vera finalmente.</li>
+                <li>Sistema Web: también conocido como “aplicación Web” son aquellos que están creados e instalados no sobre una plataforma o sistemas operativos (Windows, Linux). Sino que se aloja en un servidor en Internet o sobre una intranet (red local).</li>
+              </ul></td>
+          </tr>
+          <tr>
+            <td style="text-align:justify; padding: 10px 20px;"><h4><b>1.4</b> Referencias.</h4>
+              <p>Proporcione una lista de todos los documentos a que hace referencia el SRS. Identifique cada documento por título, número de reporte (cuando aplica), fecha, organización que publica. Especificar las fuentes den donde se obtuvieron las referencias. Puede referenciar a un Apéndice u otro documento.</p></td>
+          </tr>
+          <tr>
+            <td style="text-align:justify; padding: 10px 20px;"><h4><b>1.5</b> Apreciación Global</h4>
+              <ul>
+                <li>La sección 1 se enfoca en la explicación, objetivos, metas y descripción del documento.</li>
+                <li>La sección 2 está orientada, como su nombre lo indica, a la descripción general del sistema, donde la información está orientada al cliente/usuario potencial.</li>
+                <li>La sección 3 trata sobre los requisitos específicos. Se emplean términos técnicos orientados principalmente a los desarrolladores y programadores.</li>
+              </ul></td>
+          </tr>
+          <tr>
+              <td style="text-align:justify; padding: 10px 20px;">
+                <h3><b>2.</b> Descripción General.</h3>
+                    <p>Esta sección describe los factores generales que afectan el producto y sus requerimientos. Esta sección provee un marco general de los requerimientos definidos en detalles en la Sección 3 de este SRS.</p>
+              </td>
+          </tr>
+          <tr>
+            <td style="text-align:justify; padding: 10px 20px;">
+              <h4><b>2.1</b> Perspectivas del Producto.</h4>
+                <p>Facilitar y conservar en un software todas las ventas que esta empresa obtiene y ganancias que esta empresa reciba y que tenga un buen impacto con su sitio web, ya que los usuarios podran hacer sus comparas mediante este sitio.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:justify; padding: 10px 20px;"><h4><b>2.2</b> Funciones del Producto.</h4>
+              <p>Este le va facilitar los registros de sus ventas a la empresa y gracias al sitio web, se pretende que esta logre aumentar sus ingresos, por la facilidad que se les brindaría a los usuarios de comprar los productos que esta tiene a su disposición de formavirtuales.</p></td>
+          </tr>
+          <tr>
+            <td style="text-align:justify; padding: 10px 20px;"><h4><b>2.3</b> Características de Usuario.</h4>
+              <p>Los respectivos usuarios son: administrador, trabajadores y clientes. <br>
+                los usuarios podran registrarse en el sitio web, posteriormente, ellos podran hacer el respectivo pedido de los productos que les intereso y realizar su pago. los usuarios encargados de administrar el sitio web, podran ver las personas registradas y los pedios que tenga la empresa para luego esta hacer su respectivo envio.</P></td>
+          </tr>
+          <tr>
+            <td style="text-align:justify; padding: 10px 20px;"><h4><b>2.4</b> Restricciones.</h4><ul>
+              <li>Para este sistema las posibles restricciones son el tiempo que tomará el desarrollo de este, recursos donde se implantara el sistema, el nivel del lenguaje programación para los desarrolladores.</li>
+              <li>Que los usuarios tengan internet para poder ingresar al sitio web.</li>
+              <li>Que los usuarios que deseen comprar algun producto, se registren previamente.</li>
+            </ul></td>
+          </tr>
+          <tr>
+            <td style="text-align:justify; padding: 10px 20px;"><h4><b>2.5</b> Atención y Dependencias.</h4>
+             <p>Este sitio web facilitara a las personas, comparar dististos productos de forma virtual y segura. Este siutio Ayudara impulsar a la empresa, darse a conocer para poder expandirse a distiantas ciudades y aumentar las ventas y ganacias de la empresa.</p></td>
+          </tr>
+          <tr>
+            <td style="text-align:justify; padding: 10px 20px;">
+              <h3><b>3.</b> Requerimientos Específicos</h3>
+              <p>En esta sección se tienen con más detalle los requerimientos específicos del sistema a desarrollar.</p></td>
+          </tr>
+          <tr>
+            <td style="text-align:justify; padding: 10px 20px;">
+              <h3><b>3.1</b> Requerimientos funcionales:</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--MÓDULO DE LOGIN.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                  <tr>
+                    <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                    <td colspan="2" style="background-color: #343a40;color: white;"><b>Nombre</b></td>
+                    <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                    <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                  </tr>
+                  <tr style="background-color: white">
+                    <td>RF-001</td>
+                    <td colspan="2"><strong>MÓDULO DE LOGIN.</strong></td>
+                    <td>07-07-2020</td>
+                    <td>ALTO</td>
+                  </tr>
+                  <tr>
+                    <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                    <td style="background-color: white" colspan="4">Al sistema solo accederá personal autorizado mediante roles asignados</td>
+                  </tr>
+                  <tr>
+                    <td style= "background-color: #343a40;color: white;"><b>Entradas</b></td>
+                    <td style= "background-color: #343a40;color: white;"><b>Fuente</b></td>
+                    <td style= "background-color: #343a40;color: white;"><b>Salida</b></td>
+                    <td style= "background-color: #343a40;color: white;"><b>Destino</b></td>
+                    <td style= "background-color: #343a40;color: white;"><b>Restricciones</b></td>
+                  </tr>
+                  <tr style="background-color: white">
+                    <td>Datos personales(Usuario y  contraseña)</td>
+                    <td>Base de datos</td>
+                    <td>Interfaz Menú principal</td>
+                    <td>Interfaz de Menú Principal</td>
+                    <td>Solo se accederá a ciertos módulos del sistema según el rol del usuario</td>
+                  </tr>
+                  <tr>
+                    <td style= "background-color: #343a40;color: white;"><b>Proceso</b></td>
+                    <td style="background-color: white" colspan="4">
+                          •	Ingresar nombre y contraseña de usuario para Iniciar sesión.
+                          Cabe aclarar que el usuario previamente se encuentra registrado en la base de datos del sistema
+                          <br>
+                          •	Este Login No contará con opciones de recuperación de contraseña.</td>
+                  </tr>
+                  <tr>
+                    <td style= "background-color: #343a40;color: white;"><b>Efecto Colateral</b></td>
+                    <td colspan="4" style="background-color: white">Errar la contraseña o nombre de usuario niega el ingresó a la aplicación web, teniendo un límite de cinco (5) intentos </td>
+                  </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--REGISTRO.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                  <td colspan="2" style= "background-color: #343a40;color: white;"><b>Nombre</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                </tr>
+                <tr style="background-color: white">
+                  <td>RF-002</td>
+                  <td colspan="2"><strong>REGISTRO.</strong></td>
+                  <td>07-07-2020</td>
+                  <td>MEDIO</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                  <td colspan="4" style="background-color: white">El sistema debe permitir el registro de usuarios, asignándoles un rol (Administrador-trabajador y clientes), estos usuarios son quienes harán uso de las funcionalidades del sistema y los clientes comprar sus productos.</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Entradas</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Fuente</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Salida</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Destino</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Restricciones</b></td>
+                </tr>
+                <tr style="background-color: white">
+                  <td>Datos personales: Identificación, Nombres, Apellidos.</td>
+                  <td>Formulario de Registro para trabajadores.</td>
+                  <td>Registro satisfactorio.</td>
+                  <td>Base de Datos.</td>
+                  <td>Un usuario tiene únicamente un rol.</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Proceso</b></td>
+                  <td colspan="4" style="background-color: white">
+                        •	Recolección datos básicos personales (nombre, apellido, celular).
+                        <br>
+                        •	Registro satisfactorio del usuario.
+                        <br>
+                        <i>(Solo los usuarios que tengan el Rol de Administrador podrán hacer el registro de los usuarios que tendrán el rol de trabajador. Los usuarios que deseen hacer el registro tienen que ser trabajadores de la empresa.)</i></td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Efecto Colateral</b></td>
+                  <td colspan="4" style="background-color: white">Los usuarios que tenga el rol de trabajador no tendrán acceso a todas las funcionalidades del sistema. Una vez el trabajador sea despedido debe ser eliminado de la base de datos.</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--REGISTRO DE PRODUCTOS.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                  <td colspan="2" style= "background-color: #343a40;color: white;"><b>Nombre</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                </tr>
+                <tr style="background-color: white">
+                  <td>RF-003</td>
+                  <td colspan="2"><strong>REGISTRO DE PRODUCTOS.</strong></td>
+                  <td>07-07-2020</td>
+                  <td>ALTA.</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                  <td colspan="4" style="background-color: white">El sistema debe permitir el registro de los productos que se encuentren disponibles.</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Entradas</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Fuente</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Salida</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Destino</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Restricciones</b></td>
+                </tr>
+                <tr style="background-color: white">
+                  <td>Datos del producto: Código, Nombre, Cantidad, Proveedor.</td>
+                  <td>Formulario de Registro de producto.</td>
+                  <td>Registro del producto.</td>
+                  <td>Base de Datos.</td>
+                  <td>NINGUNO.</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Proceso</b></td>
+                  <td colspan="4" style="background-color: white">
+                        •	Recolección de datos del producto (nombre, código, cantidad, etc.).
+                        <br>
+                        •	Agregar categoría de producto.
+                        <br>
+                        • Registro satisfactorio del producto en la base de datos.
+                        <br>
+                        <i>(Una vez este registrado el producto solo será necesario tener en cuenta la cantidad de producto que se encuentra en el stock, y la información del proveedor.)</i></td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Efecto Colateral</b></td>
+                  <td colspan="4" style="background-color: white">Relacionar información con el módulo de producto.</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--REGISTRO DE SOLICITUDES.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                  <td colspan="2" style= "background-color: #343a40;color: white;"><b>Nombre</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                </tr>
+                <tr style="background-color: white">
+                  <td>RF-004</td>
+                  <td colspan="2"><strong>REGISTRO DE SOLICITUDES.</strong></td>
+                  <td>07-07-2020</td>
+                  <td>MEDIO.</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                  <td colspan="4" style="background-color: white">Los clientes pueden indicar sus peticiones y quejas referentes a cualquier inconveniente que presente con alguna de sus compras.</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Entradas</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Fuente</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Salida</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Destino</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Restricciones</b></td>
+                </tr>
+                <tr style="background-color: white">
+                  <td>Descripción de Anotación o queja.</td>
+                  <td>Formulario para el registro de las solicitudes.</td>
+                  <td>Registro de la solicitud.</td>
+                  <td>Base de Datos.</td>
+                  <td>NINGUNO.</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Proceso</b></td>
+                  <td colspan="4" style="background-color: white">
+                        •	El usuario debe registrar el inconveniente con su compra.
+                        <br>
+                        •	Exponer su Solicitud o reclamo.</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Efecto Colateral</b></td>
+                  <td colspan="4" style="background-color: white">NINGUNO.</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--SELECCIÓN DE PRODUCTOS DE LA PAGINA PRINCIPAR.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                  <td colspan="2" style= "background-color: #343a40;color: white;"><b>Nombre</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                </tr>
+                <tr style="background-color: white">
+                  <td>RF-005</td>
+                  <td colspan="2"><strong>SELECCIÓN DE PRODUCTOS DE LA PAGINA PRINCIPAR.</strong></td>
+                  <td>07-07-2020</td>
+                  <td>ALTA.</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                  <td colspan="4" style="background-color: white">El cliente podrá seleccionar los productos a los que está interesado y estos se agregaran a un formulario de compra.</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Entradas</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Fuente</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Salida</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Destino</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Restricciones</b></td>
+                </tr>
+                <tr style="background-color: white">
+                  <td>El cliente ingresa a la página
+                  <br> principal y selecciona el <br>producto que le interese.</td>
+                  <td>Página principal.</td>
+                  <td>Formulario de compra.</td>
+                  <td>Base de Datos.</td>
+                  <td>Si el cliente se sale de la página el formulario no se guardará en la base de datos.</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Proceso</b></td>
+                  <td colspan="4" style="background-color: white">
+                        •	El cliente selecciona los productos que le interese del sistema (y que esté disponible).
+                        <br>
+                        • Una vez haya seleccionado todos los productos se envía al cliente a realizar el formulario de compra.</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Efecto Colateral</b></td>
+                  <td colspan="4" style="background-color: white">Se redirecciona al cliente al formulario de compra.</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--FORMULARIO DE COMPRA.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                  <td colspan="2" style= "background-color: #343a40;color: white;"><b>Nombre</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                </tr>
+                <tr style="background-color: white">
+                  <td>RF-006</td>
+                  <td colspan="2"><strong>FORMULARIO DE COMPRA.</strong></td>
+                  <td>07-07-2020</td>
+                  <td>ALTA.</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                  <td colspan="4" style="background-color: white">El formulario de compra contendrá la información de los productos que solicita el cliente en la compra, así como la información del cliente e información de formas de pago.</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Entradas</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Fuente</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Salida</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Destino</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Restricciones</b></td>
+                </tr>
+                <tr style="background-color: white">
+                  <td>
+                    Se solicita la información de producto: <br> Códigos de productos, Cantidad.
+                    <br>
+                    Se solicita la información del cliente: <br>Tipo (persona o entidad), Dirección, Nombre, Teléfono, Información de forma de pago.</td>
+                  <td>Formulario de compra.</td>
+                  <td>Formulario de compra ha sido registrado.</td>
+                  <td>Base de Datos.</td>
+                  <td>NINGUNA.</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Proceso</b></td>
+                  <td colspan="4" style="background-color: white">
+                        •	Recolección de datos ingresados ​​por el cliente.
+                        <br>
+                        • Se envía el formulario de compra.
+                        <br>
+                      <i>(Si el cliente cancela la compra se bórrala el formulario de compra de la base de datos.)</i></td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Efecto Colateral</b></td>
+                  <td colspan="4" style="background-color: white">El cliente recibe un mensaje de “compra exitosa”.</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--AYUDA.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                  <td colspan="2" style= "background-color: #343a40;color: white;"><b>Nombre</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                </tr>
+                <tr style="background-color: white">
+                  <td>RF-007</td>
+                  <td colspan="2"><strong>AYUDA.</strong></td>
+                  <td>07-07-2020</td>
+                  <td>ALTA.</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                  <td colspan="4" style="background-color: white">El sistema tendrá un botón que permitirá que re direccionara un archivo PDF donde se hallará información de ayuda.</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Entradas</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Fuente</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Salida</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Destino</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Restricciones</b></td>
+                </tr>
+                <tr style="background-color: white">
+                  <td>Duda, pregunta del usuario.</td>
+                  <td>Archivo PDF.</td>
+                  <td>Nueva pestaña con el PDF.</td>
+                  <td>Nueva pestaña con el PDF.</td>
+                  <td>NINGUNA.</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Proceso</b></td>
+                  <td colspan="4" style="background-color: white">
+                        •	El usuario del sistema podrá realizar consultas en un manual de ayuda para saber cómo ejecutar una función del sistema. </td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Efecto Colateral</b></td>
+                  <td colspan="4" style="background-color: white">NINGUNO.</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:justify; padding: 10px 20px;"><h3><b>3.2</b> Requerimientos no funcionales:</h3></td>
+          </tr>
+          <tr>
+            <td>
+              <!--DESEMPEÑO.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                  <tr>
+                    <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                    <td colspan="2" style= "background-color: #343a40;color: white;"><b>Nombre</b></td>
+                    <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                    <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                  </tr>
+                  <tr style="background-color: white">
+                    <td>RFN-001</td>
+                    <td colspan="2"><strong>DESEMPEÑO.</strong></td>
+                    <td>07-07-2020</td>
+                    <td>ALTA</td>
+                  </tr>
+                  <tr>
+                    <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                    <td colspan="4" style="background-color: white">El tiempo de respuesta y la duración de las opciones funcionales del software será lo más rápido posible.
+                    <br>Por tanto el nivel de servicios requerido es tal que el sistema de información con el tiempo no sufra una disminución en su desempeño (degradación) respecto al nivel previo al de la puesta en producción.</td>
+                  </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--SEGURIDAD.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                  <tr>
+                    <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                    <td colspan="2" style= "background-color: #343a40;color: white;"><b>Nombre</b></td>
+                    <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                    <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                  </tr>
+                  <tr style="background-color: white">
+                    <td>RFN-002</td>
+                    <td colspan="2"><strong>SEGURIDAD.</strong></td>
+                    <td>07-07-2020</td>
+                    <td>ALTA</td>
+                  </tr>
+                  <tr>
+                    <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                    <td colspan="4" style="background-color: white">La seguridad prima en cualquier sistema es por esto que para aplicar esta se hará uso de una contraseña, y usuario único con un rol, lo que permite controlar el acceso a la información alojada.</td>
+                  </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--USABILIDAD.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                  <tr>
+                    <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                    <td colspan="2" style= "background-color: #343a40;color: white;"><b>Nombre</b></td>
+                    <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                    <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                  </tr>
+                  <tr style="background-color: white">
+                    <td>RFN-003</td>
+                    <td colspan="2"><strong>USABILIDAD.</strong></td>
+                    <td>07-07-2020</td>
+                    <td>ALTA</td>
+                  </tr>
+                  <tr>
+                    <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                    <td colspan="4" style="background-color: white">El software deberá ser lo suficientemente fácil de manejar por el usuario, es decir este último podrá hacer todas las operaciones del sistema sin problema, sin embargo, cualquier duda que surja podrá ser consultada en la “Ayuda”.</td>
+                  </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--DISPONIBILIDAD.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                  <tr>
+                    <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                    <td colspan="2" style= "background-color: #343a40;color: white;"><b>Nombre</b></td>
+                    <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                    <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                  </tr>
+                  <tr style="background-color: white">
+                    <td>RFN-004</td>
+                    <td colspan="2"><strong>DISPONIBILIDAD.</strong></td>
+                    <td>07-07-2020</td>
+                    <td>ALTA</td>
+                  </tr>
+                  <tr>
+                    <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                    <td colspan="4" style="background-color: white">la disponibilidad del sietema, dependencia de la empresa. Que donde se haya alojado el sistema este en funcionamiento en los horarios de atención de la empresa.</td>
+                  </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--FIABILIDAD.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                  <tr>
+                    <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                    <td colspan="2" style= "background-color: #343a40;color: white;"><b>Nombre</b></td>
+                    <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                    <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                  </tr>
+                  <tr style="background-color: white">
+                    <td>RFN-005</td>
+                    <td colspan="2"><strong>FIABILIDAD.</strong></td>
+                    <td>07-07-2020</td>
+                    <td>ALTA</td>
+                  </tr>
+                  <tr>
+                    <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                    <td colspan="4" style="background-color: white">La definición de como la probabilidad de que este producto funcione sin fallos durante un lapso estimado de un (1 año) sin recibir un mantenimiento correctivo.</td>
+                  </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--MANTENIBILIDAD.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                  <tr>
+                    <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                    <td colspan="2" style= "background-color: #343a40;color: white;"><b>Nombre</b></td>
+                    <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                    <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                  </tr>
+                  <tr style="background-color: white">
+                    <td>RFN-006</td>
+                    <td colspan="2"><strong>MANTENIBILIDAD.</strong></td>
+                    <td>07-07-2020</td>
+                    <td>ALTA</td>
+                  </tr>
+                  <tr>
+                    <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                    <td colspan="4" style="background-color: white">Se debe realizar mantenimiento preventivo ya que es de gran importancia para verificar el buen desarrollo de las actividades o procesos del sistema. El sistema deberá tener la capacidad de recuperarse en lo posible frente a los posibles fallos que puedan presentarse.</td>
+                  </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--PORTABILIDAD.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                  <tr>
+                    <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                    <td colspan="2" style= "background-color: #343a40;color: white;"><b>Nombre</b></td>
+                    <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                    <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                  </tr>
+                  <tr style="background-color: white">
+                    <td>RFN-007</td>
+                    <td colspan="2"><strong>PORTABILIDAD.</strong></td>
+                    <td>07-07-2020</td>
+                    <td>ALTA</td>
+                  </tr>
+                  <tr>
+                    <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                    <td colspan="4" style="background-color: white">Podemos asegurar que el sistema será totalmente portátil en cuanto a sistemas operativos, ya que este sistema funcionará desde un navegador, bien sea Google Chrome o Mozilla Firefox deberá funcionar adecuadamente.
+                        <br>
+                        Sin embargo se recomienda el uso del navegador Google Chrome.</td>
+                  </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:justify; padding: 10px 20px;">
+              <h3><b>3.3</b> Requerimientos de interfaz de usuario:</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--LOGIN.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                  <td colspan="2" style= "background-color: #343a40;color: white;"><b>Nombre</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                </tr>
+                <tr style="background-color: white">
+                  <td> RIU-001</td>
+                  <td colspan="2"><strong>LOGIN.</strong></td>
+                  <td>07-07-2020</td>
+                  <td>ALTA</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                  <td colspan="4" style="background-color: white">Interfaz que permitirá a los usuarios (Administrador, UsuAdmin) del sistema ingresar a este, para hacer uso de las funcionalidades de este.</td>
+                </tr>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--MENU PRINCIPAL.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                  <td colspan="2" style= "background-color: #343a40;color: white;"><b>Nombre</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                </tr>
+                <tr style="background-color: white">
+                  <td> RIU-002</td>
+                  <td colspan="2"><strong>MENU PRINCIPAL.</strong></td>
+                  <td>07-07-2020</td>
+                  <td>MEDIO</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                  <td colspan="4" style="background-color: white">Interfaz que permitirá elegir la funcionalidad del sistema a la cual se desea acceder.</td>
+                </tr>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--REGISTRO DE USUARIO.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                  <td colspan="2" style= "background-color: #343a40;color: white;"><b>Nombre</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                </tr>
+                <tr style="background-color: white">
+                  <td> RIU-003</td>
+                  <td colspan="2"><strong>REGISTRO DE USUARIO.</strong></td>
+                  <td>07-07-2020</td>
+                  <td>ALTA</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                  <td colspan="4" style="background-color: white">Interfaz que permitirá al Administrador registrar en la base de datos del sistema a los trabajadores y los clientes también podrán registrase en este.</td>
+                </tr>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--PRODUCTOS.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                  <td colspan="2" style= "background-color: #343a40;color: white;"><b>Nombre</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                </tr>
+                <tr style="background-color: white">
+                  <td> RIU-004</td>
+                  <td colspan="2"><strong>PRODUCTOS.</strong></td>
+                  <td>07-07-2020</td>
+                  <td>ALTA</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                  <td colspan="4" style="background-color: white">Interfaz que permitirá mostrar los productos que se venderán, se detallara las características de este, su precio y entre otros.</td>
+                </tr>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--REGISTRO  DE  OBJETO.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                  <td colspan="2" style= "background-color: #343a40;color: white;"><b>Nombre</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                </tr>
+                <tr style="background-color: white">
+                  <td> RIU-005</td>
+                  <td colspan="2"><strong>REGISTRO  DE  OBJETO.</strong></td>
+                  <td>07-07-2020</td>
+                  <td>ALTA</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                  <td colspan="4" style="background-color: white">Interfaz que permitirá registrar los objetos que ingresen por primera vez al sitio web de manera sencilla.</td>
+                </tr>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--REGISTRO DE SOLICITUDES.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                  <td colspan="2" style= "background-color: #343a40;color: white;"><b>Nombre</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                </tr>
+                <tr style="background-color: white">
+                  <td> RIU-006</td>
+                  <td colspan="2"><strong>REGISTRO  DE  OBJETO.</strong></td>
+                  <td>07-07-2020</td>
+                  <td>ALTA</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                  <td colspan="4" style="background-color: white">Interfaz que permite registrar solicitudes realizadas por los clientes ya sea para presentar una queja o comentar respecto al sitio web.</td>
+                </tr>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--REPORTES.-->
+              <table border="1" class="col-md-12 col-sm-12 col-xs-12" style="  text-align: center;border-color: black;">
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Codigo</b></td>
+                  <td colspan="2" style= "background-color: #343a40;color: white;"><b>Nombre</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>fecha</b></td>
+                  <td style= "background-color: #343a40;color: white;"><b>Grado de necesidad</b></td>
+                </tr>
+                <tr style="background-color: white">
+                  <td> RIU-007</td>
+                  <td colspan="2"><strong>REPORTES.</strong></td>
+                  <td>07-07-2020</td>
+                  <td>MEDIO</td>
+                </tr>
+                <tr>
+                  <td style= "background-color: #343a40;color: white;"><b>Descripcion</b></td>
+                  <td colspan="4" style="background-color: white">Interfaz que permite generar al administrador los respectivos reportes de los productos vendidos.</td>
+                </tr>
+            </table>
+            </td>
+          </tr>
+        </table>
+        <div>
+          .
+          </div>
+        </div>
+  </main>
+  <footer height="100">
+    <div id="lado1">
+    <a class="j1" href="" download=""><b>DESCARGAR</b></a>
+    </div></footer>
+</body>
